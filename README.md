@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# 黑米科技官网 / BlackRice Tech Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+黑米科技的官方网站，展示我们在围棋技术领域的创新产品和服务。
 
-## Available Scripts
+## 产品介绍
 
-In the project directory, you can run:
+### 🎯 黑米围棋 (BlackRice Go)
+专业的在线围棋对弈平台，支持实时对局、AI分析和棋谱研究。
 
-### `npm start`
+### 💬 围棋论坛 (Go Forum)
+围棋爱好者交流社区，分享棋谱、讨论技巧、获取最新围棋资讯。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 📺 直播系统 (Live System)
+专业的围棋赛事直播平台，支持多角度观看和实时解说。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### ⏰ 视频转播一体智能棋钟 (Smart Go Clock)
+集计时、摄像、棋盘识别、实时同步等功能于一体的革命性硬件设备。（开发中）
 
-### `npm test`
+## 技术栈
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 19 + TypeScript
+- 响应式设计
+- 双语支持（中文/英文）
+- GitHub Pages 部署
+- 现代CSS样式
 
-### `npm run build`
+## 本地开发
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# 安装依赖
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 启动开发服务器
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 构建生产版本
+npm run build
 
-### `npm run eject`
+# 部署到GitHub Pages
+npm run deploy
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 部署说明
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. 确保在GitHub仓库设置中启用GitHub Pages
+2. 推送代码到main分支会自动触发部署
+3. 网站将在 `https://yourusername.github.io/blackriceweb` 可访问
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 联系我们
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- GitHub: [BlackRice Tech](https://github.com/blackricetech)
+- 邮箱: contact@blackricetech.com
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+© 2024 BlackRice Tech. All Rights Reserved.
