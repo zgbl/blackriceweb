@@ -2,7 +2,8 @@
   "name": "blackriceweb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/blackriceweb",
+  "homepage": "https://www2.blackrice.top",
+  
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -48,4 +49,7 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
+  
 }
+
+
