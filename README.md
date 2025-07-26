@@ -52,7 +52,7 @@ npm run deploy
 
 ## 联系我们
 
-- GitHub: [BlackRice Tech](https://github.com/zgbl/blackriceweb)
+- GitHub: [BlackRice Tech](https://www.blackrice.top)
 - 邮箱: blackricetech@gmail.com
 
 ---
