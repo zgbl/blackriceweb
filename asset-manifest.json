@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/blackriceweb/static/css/main.4e1a692d.css",
+    "main.js": "/blackriceweb/static/js/main.41a73331.js",
+    "static/js/453.ca5af62f.chunk.js": "/blackriceweb/static/js/453.ca5af62f.chunk.js",
+    "index.html": "/blackriceweb/index.html",
+    "main.4e1a692d.css.map": "/blackriceweb/static/css/main.4e1a692d.css.map",
+    "main.41a73331.js.map": "/blackriceweb/static/js/main.41a73331.js.map",
+    "453.ca5af62f.chunk.js.map": "/blackriceweb/static/js/453.ca5af62f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e1a692d.css",
+    "static/js/main.41a73331.js"
+  ]
+}
