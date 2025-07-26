@@ -2,7 +2,7 @@
   "name": "blackriceweb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www2.blackrice.top",
+  "homepage": "https://www.blackrice.top",
   
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
