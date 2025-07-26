@@ -1,88 +1,148 @@
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle, Star } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="pt-16 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="animate-fade-in">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-              Currently raising seed funding
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Building the future of
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> strategy gaming</span>
+    <section className="relative py-16 bg-white overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-50 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div className="absolute top-40 right-20 w-72 h-72 bg-purple-50 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+        </div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-8 max-w-4xl mx-auto">
+          {/* Announcement bar */}
+          <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-sm font-medium">
+            <Star className="w-4 h-4 mr-2 fill-current" />
+            Raising Angel round • USD 500K target 
+          </div>
+          
+          {/* Main headline */}
+          <div className="space-y-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              The only AI platform built for
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Weiqi(Go) strategy</span>
             </h1>
-            
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              BlackRice Tech combines artificial intelligence with traditional strategy games, 
-              starting with Go. We're creating intelligent platforms that enhance learning, 
-              competition, and community for strategy game enthusiasts worldwide.
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              Stop playing blind. BlackRice turns traditional Weiqi into an intelligent experience—obsessed with your strategy, 
+              devoted to your improvement, fueling your growth.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
-                Learn More
-                <ArrowRight className="ml-2" size={20} />
-              </button>
-              <button className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200 font-medium">
-                <Play className="mr-2" size={20} />
-                Watch Demo
-              </button>
+          </div>
+
+          {/* Email signup */}
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+            />
+            <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap">
+              Get started
+            </button>
+          </div>
+
+          {/* Secondary CTA */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="group inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">
+              <Play className="mr-2 w-5 h-5" />
+              Watch demo
+            </button>
+            <span className="text-gray-400">•</span>
+            <div className="flex items-center text-sm text-gray-600">
+              <div className="flex -space-x-2 mr-3">
+                <div className="w-6 h-6 bg-blue-500 rounded-full border-2 border-white"></div>
+                <div className="w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
+                <div className="w-6 h-6 bg-purple-500 rounded-full border-2 border-white"></div>
+                <div className="w-6 h-6 bg-orange-500 rounded-full border-2 border-white"></div>
+              </div>
+              Join 50,000+ players
             </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
-              <div>
-                <div className="text-2xl font-bold text-gray-900">10K+</div>
-                <div className="text-sm text-gray-600">Active Users</div>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="pt-12">
+            <p className="text-sm text-gray-500 mb-8">Trusted by Go players worldwide</p>
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">50K+</div>
+                <div className="text-sm text-gray-500">Active players</div>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900">50K+</div>
-                <div className="text-sm text-gray-600">Games Played</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">1M+</div>
+                <div className="text-sm text-gray-500">Games analyzed</div>
               </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900">2024</div>
-                <div className="text-sm text-gray-600">Founded</div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-gray-900">99.9%</div>
+                <div className="text-sm text-gray-500">Uptime</div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Visual */}
-          <div className="animate-slide-up">
-            <div className="relative">
-              {/* Main product mockup */}
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
-                  <div className="grid grid-cols-19 gap-1 mb-4">
-                    {/* Go board representation */}
-                    {Array.from({ length: 361 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className="w-2 h-2 bg-amber-100 border border-amber-200 rounded-sm"
-                      />
-                    ))}
+          {/* Product preview */}
+          <div className="pt-16">
+            <div className="relative max-w-4xl mx-auto">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                {/* Browser chrome */}
+                <div className="bg-gray-50 px-4 py-3 border-b border-gray-200 flex items-center">
+                  <div className="flex space-x-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <div className="flex items-center justify-between text-sm text-gray-600">
-                    <span>AI Analysis: 67% win probability</span>
-                    <span className="text-green-600">● Live</span>
+                  <div className="flex-1 text-center">
+                    <div className="bg-white rounded px-3 py-1 text-sm text-gray-600 inline-block">
+                      app.blackrice.ai
+                    </div>
+                  </div>
+                </div>
+                
+                {/* App interface mockup */}
+                <div className="bg-gradient-to-br from-gray-50 to-white p-8">
+                  <div className="grid grid-cols-3 gap-6">
+                    <div className="col-span-2">
+                      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+                        <div className="grid grid-cols-8 gap-1">
+                          {Array.from({ length: 64 }).map((_, i) => (
+                            <div
+                              key={i}
+                              className={`aspect-square rounded-sm ${
+                                Math.random() > 0.8 ? 'bg-gray-900' : 
+                                Math.random() > 0.9 ? 'bg-white border border-gray-300' : 'bg-gray-100'
+                              }`}
+                            ></div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="bg-blue-50 rounded-lg p-4">
+                        <div className="text-sm font-medium text-blue-900 mb-2">AI Analysis</div>
+                        <div className="space-y-2">
+                          <div className="h-2 bg-blue-200 rounded w-3/4"></div>
+                          <div className="h-2 bg-blue-200 rounded w-1/2"></div>
+                        </div>
+                      </div>
+                      <div className="bg-green-50 rounded-lg p-4">
+                        <div className="text-sm font-medium text-green-900 mb-2">Live Match</div>
+                        <div className="flex items-center text-xs text-green-700">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+                          3 viewers watching
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-3 border border-gray-200">
-                <div className="text-xs text-gray-500">Smart Clock</div>
-                <div className="text-lg font-bold text-gray-900">15:42</div>
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-medium shadow-lg">
+                Real-time AI
               </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-3 border border-gray-200">
-                <div className="text-xs text-gray-500">Community</div>
-                <div className="text-lg font-bold text-gray-900">2.3K</div>
+              <div className="absolute -bottom-4 -left-4 bg-purple-600 text-white px-3 py-1 rounded-lg text-sm font-medium shadow-lg">
+                Smart Hardware
               </div>
             </div>
           </div>

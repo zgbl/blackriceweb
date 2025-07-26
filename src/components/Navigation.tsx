@@ -1,79 +1,77 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React from 'react';
+import { Globe } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Products', href: '#products' },
-    { name: 'About', href: '#about' },
-    { name: 'Team', href: '#team' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">BR</span>
+    <>
+      {/* Top bar */}
+      <div className="bg-gray-900 text-white text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-10">
+            <div className="flex items-center space-x-6">
+              <a href="#home" className="text-white hover:text-gray-300 transition-colors">Home</a>
+              <a href="#help" className="text-white hover:text-gray-300 transition-colors">Help center</a>
+              <a href="#enterprise" className="text-white hover:text-gray-300 transition-colors">Enterprise</a>
+              <a href="#partners" className="text-white hover:text-gray-300 transition-colors">Partners</a>
             </div>
-            <span className="text-xl font-bold text-gray-900">BlackRice Tech</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
-            ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
-              Get in Touch
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 text-white">
+                <Globe className="w-4 h-4" />
+                <span>United States - EN</span>
+              </div>
+              <a href="#login" className="text-white hover:text-gray-300 transition-colors">Log in</a>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <button className="w-full mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                Get in Touch
+      {/* Main navigation - 永远显示，没有隐藏按钮 */}
+      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">BR</span>
+              </div>
+              <span className="text-xl font-semibold text-gray-900">BlackRice</span>
+            </div>
+
+            {/* Navigation - 在所有屏幕尺寸上都显示 */}
+            <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-8">
+              <a href="#platform" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                Platform
+              </a>
+              <a href="#product" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                Product
+              </a>
+              <a href="#solutions" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                Solutions
+              </a>
+              <a href="#resources" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                Resources
+              </a>
+              <a href="#about" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                About
+              </a>
+              <a href="#pricing" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm md:text-base">
+                Pricing
+              </a>
+            </div>
+
+            {/* Right side buttons */}
+            <div className="flex items-center space-x-2 md:space-x-3">
+              <button className="bg-white hover:bg-gray-50 text-gray-900 px-3 py-2 md:px-4 rounded-lg font-medium border border-gray-300 transition-all duration-200 text-sm">
+                Sign up
+              </button>
+              <button className="bg-gray-900 hover:bg-gray-800 text-white px-3 py-2 md:px-4 rounded-lg font-medium transition-all duration-200 text-sm">
+                Get demo
               </button>
             </div>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 };
 
