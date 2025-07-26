@@ -48,7 +48,7 @@ npm run deploy
 
 1. 确保在 GitHub 仓库设置中启用 GitHub Pages
 2. 推送代码到 main 分支会自动触发部署
-3. 网站将在 `https://www.blackrice.top' 可访问
+3. 网站将在 https://www.blackrice.top 可访问
 
 ## 联系我们
 
