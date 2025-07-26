@@ -5,15 +5,19 @@
 ## 产品介绍
 
 ### 🎯 黑米围棋 (BlackRice Go)
-专业的在线围棋对弈平台，支持实时对局、AI分析和棋谱研究。
+
+专业的在线围棋对弈平台，支持实时对局、AI 分析和棋谱研究。
 
 ### 💬 围棋论坛 (Go Forum)
+
 围棋爱好者交流社区，分享棋谱、讨论技巧、获取最新围棋资讯。
 
 ### 📺 直播系统 (Live System)
+
 专业的围棋赛事直播平台，支持多角度观看和实时解说。
 
 ### ⏰ 视频转播一体智能棋钟 (Smart Go Clock)
+
 集计时、摄像、棋盘识别、实时同步等功能于一体的革命性硬件设备。（开发中）
 
 ## 技术栈
@@ -22,7 +26,7 @@
 - 响应式设计
 - 双语支持（中文/英文）
 - GitHub Pages 部署
-- 现代CSS样式
+- 现代 CSS 样式
 
 ## 本地开发
 
@@ -42,14 +46,14 @@ npm run deploy
 
 ## 部署说明
 
-1. 确保在GitHub仓库设置中启用GitHub Pages
-2. 推送代码到main分支会自动触发部署
+1. 确保在 GitHub 仓库设置中启用 GitHub Pages
+2. 推送代码到 main 分支会自动触发部署
 3. 网站将在 `https://yourusername.github.io/blackriceweb` 可访问
 
 ## 联系我们
 
-- GitHub: [BlackRice Tech](https://github.com/blackricetech)
-- 邮箱: contact@blackricetech.com
+- GitHub: [BlackRice Tech](https://github.com/zgbl/blackriceweb)
+- 邮箱: blackricetech@gmail.com
 
 ---
 
