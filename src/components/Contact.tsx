@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">General Inquiries</h3>
-                  <p className="text-gray-600">hello@blackricetech.com</p>
+                  <p className="text-gray-600">blackricetect@gmail.com</p>
                 </div>
               </div>
 
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">Investment Opportunities</h3>
-                  <p className="text-gray-600">investors@blackricetech.com</p>
+                  <p className="text-gray-600">blackricetech@gmail.com</p>
                 </div>
               </div>
             </div>

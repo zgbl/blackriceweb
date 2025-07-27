@@ -1,45 +1,101 @@
 import React from 'react';
 import { Globe } from 'lucide-react';
-import BlackRiceLogo from '../BlackRiceLogo25.webp';
+import { Link, useLocation } from 'react-router-dom';
+import BlackRiceLogo from '../BlackRiceLogo1.ico';
 
 const Navigation: React.FC = () => {
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src={BlackRiceLogo} 
               alt="BlackRice Logo" 
-              className="w-8 h-8 object-contain rounded-md"
+              className="w-8 h-8 object-contain"
             />
             <span className="text-xl font-semibold text-gray-900">BlackRice</span>
-          </div>
+          </Link>
 
           {/* Main Navigation */}
           <div className="flex items-center space-x-6 lg:space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            <Link 
+              to="/" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Home
-            </a>
-            <a href="#product" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/product" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/product') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Product
-            </a>
-            <a href="#solutions" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/solutions" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/solutions') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Solutions
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/about" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/about') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               About
-            </a>
-            <a href="#blog" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/blog" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/blog') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Blog
-            </a>
-            <a href="#careers" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/careers" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/careers') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Careers
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium">
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/contact') 
+                  ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                  : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Right side - Secondary links and buttons */}
