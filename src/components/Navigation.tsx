@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe } from 'lucide-react';
+import BlackRiceLogo from '../BlackRiceLogo25.webp';
 
 const Navigation: React.FC = () => {
   return (
@@ -8,9 +9,11 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">BR</span>
-            </div>
+            <img 
+              src={BlackRiceLogo} 
+              alt="BlackRice Logo" 
+              className="w-8 h-8 object-contain rounded-md"
+            />
             <span className="text-xl font-semibold text-gray-900">BlackRice</span>
           </div>
 
