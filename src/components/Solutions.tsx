@@ -1,38 +1,41 @@
 import React from 'react';
 import { Users, GraduationCap, Trophy, Building2, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Solutions: React.FC = () => {
+  const { t } = useLanguage();
+
   const solutions = [
     {
       icon: Users,
-      title: 'For Individual Players',
-      description: 'Improve your game with AI-powered analysis, personalized training, and detailed performance insights.',
-      features: ['AI move analysis', 'Personal coaching', 'Progress tracking', 'Community access'],
-      cta: 'Start playing',
+      title: t('forIndividualPlayers'),
+      description: t('individualPlayersDesc'),
+      features: [t('aiMoveAnalysis'), t('personalCoaching'), t('progressTracking'), t('communityAccess')],
+      cta: t('startPlaying'),
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: GraduationCap,
-      title: 'For Schools & Education',
-      description: 'Comprehensive Go education platform with curriculum, student management, and progress tracking.',
-      features: ['Curriculum management', 'Student progress', 'Classroom tools', 'Assessment system'],
-      cta: 'Learn more',
+      title: t('forSchoolsEducation'),
+      description: t('schoolsEducationDesc'),
+      features: [t('curriculumManagement'), t('studentProgress'), t('classroomTools'), t('assessmentSystem')],
+      cta: t('learnMore'),
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Trophy,
-      title: 'For Tournaments',
-      description: 'Professional tournament management with live streaming, automated pairing, and real-time results.',
-      features: ['Tournament management', 'Live streaming', 'Automated pairing', 'Real-time scoring'],
-      cta: 'Host tournament',
+      title: t('forTournaments'),
+      description: t('tournamentsDesc'),
+      features: [t('tournamentManagement'), t('liveStreaming'), t('automatedPairing'), t('realTimeScoring')],
+      cta: t('hostTournament'),
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Building2,
-      title: 'For Organizations',
-      description: 'Enterprise-grade Go platform for clubs, associations, and professional organizations.',
-      features: ['Member management', 'Custom branding', 'Analytics dashboard', 'API integration'],
-      cta: 'Contact sales',
+      title: t('forOrganizations'),
+      description: t('organizationsDesc'),
+      features: [t('memberManagement'), t('customBranding'), t('analyticsDashboard'), t('apiIntegration')],
+      cta: t('contactSales'),
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -43,12 +46,11 @@ const Solutions: React.FC = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Solutions for every
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Go player</span>
+            {t('solutionsForEvery')}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> {t('goPlayer')}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Whether you're a beginner learning the basics or a professional organizing tournaments, 
-            we have the perfect solution for your needs.
+            {t('solutionsDescription')}
           </p>
         </div>
 
@@ -99,13 +101,13 @@ const Solutions: React.FC = () => {
         <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Need a custom solution?
+              {t('needCustomSolution')}
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Our team can work with you to create a tailored Go platform that meets your specific requirements.
+              {t('customSolutionDesc')}
             </p>
             <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200">
-              Contact our team
+              {t('contactOurTeam')}
             </button>
           </div>
         </div>

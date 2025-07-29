@@ -1,7 +1,10 @@
 import React from 'react';
 import { Mail, MessageSquare, Github, Linkedin, Twitter } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,12 +12,11 @@ const Contact: React.FC = () => {
           {/* Left Column - Contact Info */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Let's build the future together
+              {t('buildFutureTogether')}
             </h2>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Whether you're an investor, potential partner, or just curious about what we're building, 
-              we'd love to hear from you.
+              {t('contactDescription')}
             </p>
 
             <div className="space-y-6">
@@ -23,7 +25,7 @@ const Contact: React.FC = () => {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">General Inquiries</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('generalInquiries')}</h3>
                   <p className="text-gray-600">blackricetect@gmail.com</p>
                 </div>
               </div>
@@ -33,14 +35,14 @@ const Contact: React.FC = () => {
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">Investment Opportunities</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('investmentOpportunities')}</h3>
                   <p className="text-gray-600">blackricetech@gmail.com</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-12">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('followUs')}</h3>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/blackricetech"
@@ -66,13 +68,13 @@ const Contact: React.FC = () => {
 
           {/* Right Column - Contact Form */}
           <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('sendMessage')}</h3>
             
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name
+                    {t('firstName')}
                   </label>
                   <input
                     type="text"
@@ -83,7 +85,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name
+                    {t('lastName')}
                   </label>
                   <input
                     type="text"
@@ -96,7 +98,7 @@ const Contact: React.FC = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  {t('email')}
                 </label>
                 <input
                   type="email"
@@ -108,29 +110,29 @@ const Contact: React.FC = () => {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
+                  {t('subject')}
                 </label>
                 <select
                   id="subject"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option>General Inquiry</option>
-                  <option>Investment Opportunity</option>
-                  <option>Partnership</option>
-                  <option>Press & Media</option>
-                  <option>Other</option>
+                  <option>{t('generalInquiry')}</option>
+                  <option>{t('investmentOpportunity')}</option>
+                  <option>{t('partnership')}</option>
+                  <option>{t('pressMedia')}</option>
+                  <option>{t('other')}</option>
                 </select>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
+                  {t('message')}
                 </label>
                 <textarea
                   id="message"
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your inquiry..."
+                  placeholder={t('messagePlaceholder')}
                 ></textarea>
               </div>
 
@@ -138,7 +140,7 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
               >
-                Send Message
+                {t('sendMessage')}
               </button>
             </form>
           </div>

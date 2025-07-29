@@ -1,13 +1,19 @@
 import React from 'react';
 import { Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import BlackRiceLogo from '../BlackRiceLogo1.ico';
+import { useLanguage } from '../contexts/LanguageContext';
+import BlackRiceLogo from '../BlackRiceLogo25.webp';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
 
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'zh' : 'en');
   };
 
   return (
@@ -19,7 +25,7 @@ const Navigation: React.FC = () => {
             <img 
               src={BlackRiceLogo} 
               alt="BlackRice Logo" 
-              className="w-8 h-8 object-contain"
+              className="w-8 h-8 object-contain rounded-md"
             />
             <span className="text-xl font-semibold text-gray-900">BlackRice</span>
           </Link>
@@ -34,7 +40,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Home
+              {t('home')}
             </Link>
             <Link 
               to="/product" 
@@ -44,7 +50,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Product
+              {t('product')}
             </Link>
             <Link 
               to="/solutions" 
@@ -54,7 +60,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Solutions
+              {t('solutions')}
             </Link>
             <Link 
               to="/about" 
@@ -64,7 +70,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              About
+              {t('about')}
             </Link>
             <Link 
               to="/blog" 
@@ -74,7 +80,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Blog
+              {t('blog')}
             </Link>
             <Link 
               to="/careers" 
@@ -84,7 +90,7 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Careers
+              {t('careers')}
             </Link>
             <Link 
               to="/contact" 
@@ -94,30 +100,36 @@ const Navigation: React.FC = () => {
                   : 'text-gray-700 hover:text-gray-900'
               }`}
             >
-              Contact
+              {t('contact')}
             </Link>
           </div>
 
           {/* Right side - Secondary links and buttons */}
           <div className="flex items-center space-x-4">
-            {/* Secondary links */}
+            {/* Secondary links - hidden on smaller screens */}
             <div className="hidden lg:flex items-center space-x-4 text-sm">
-              <a href="#help" className="text-gray-600 hover:text-gray-900 transition-colors">Help center</a>
-              <a href="#enterprise" className="text-gray-600 hover:text-gray-900 transition-colors">Enterprise</a>
-              <a href="#partners" className="text-gray-600 hover:text-gray-900 transition-colors">Partners</a>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <Globe className="w-4 h-4" />
-                <span>EN</span>
-              </div>
+              <a href="#help" className="text-gray-600 hover:text-gray-900 transition-colors">{t('helpCenter')}</a>
+              <a href="#enterprise" className="text-gray-600 hover:text-gray-900 transition-colors">{t('enterprise')}</a>
+              <a href="#partners" className="text-gray-600 hover:text-gray-900 transition-colors">{t('partners')}</a>
             </div>
+            
+            {/* Language Toggle - always visible */}
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors p-2 rounded-md hover:bg-gray-100"
+              title={language === 'en' ? 'Switch to Chinese' : '切换到英文'}
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-sm font-medium">{language === 'en' ? 'EN' : '中文'}</span>
+            </button>
             
             {/* Action buttons */}
             <div className="flex items-center space-x-2">
               <a href="#login" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">
-                Log in
+                {t('login')}
               </a>
               <button className="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200">
-                Sign up
+                {t('signup')}
               </button>
             </div>
           </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Target, Lightbulb, Globe, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+
   const values = [
     {
       icon: <Target className="w-6 h-6" />,
@@ -28,34 +31,34 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column - Content */}
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Bridging ancient wisdom with modern technology
-            </h2>
-            
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Founded in 2024, BlackRice Tech emerged from a simple observation: traditional strategy 
-              games like Go contain thousands of years of accumulated wisdom, but modern technology 
-              could unlock new ways to learn, play, and connect around these timeless pursuits.
-            </p>
-            
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our team combines deep expertise in artificial intelligence, game design, and community 
-              building to create products that respect tradition while embracing innovation. We believe 
-              that the future of gaming lies not in replacing human intelligence, but in augmenting it.
-            </p>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            {t('aboutTitle')}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {t('aboutDescription')}
+          </p>
+        </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Currently Seeking</h3>
-              <p className="text-gray-600 mb-4">
-                We're raising our seed round to accelerate product development and expand our team. 
-                Looking for investors who share our vision of AI-enhanced strategy gaming.
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column - Mission & Vision */}
+          <div className="space-y-8">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {t('ourMission')}
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {t('missionText')}
               </p>
-              <button className="text-blue-600 hover:text-blue-700 font-medium">
-                Investment Deck →
-              </button>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {t('ourVision')}
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {t('visionText')}
+              </p>
             </div>
           </div>
 
@@ -78,6 +81,17 @@ const About: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8 bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Currently Seeking</h3>
+              <p className="text-gray-600 mb-4">
+                We're raising our seed round to accelerate product development and expand our team. 
+                Looking for investors who share our vision of AI-enhanced strategy gaming.
+              </p>
+              <button className="text-blue-600 hover:text-blue-700 font-medium">
+                Investment Deck →
+              </button>
             </div>
           </div>
         </div>

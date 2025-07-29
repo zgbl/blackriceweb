@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight, Play, CheckCircle, Star } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative py-16 bg-white overflow-hidden">
       {/* Background decoration */}
@@ -23,12 +26,10 @@ const Hero: React.FC = () => {
           {/* Main headline */}
           <div className="space-y-6">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              The only AI platform built for
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Weiqi(Go) strategy</span>
+              {t('heroTitle')}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Stop playing blind. BlackRice turns traditional Weiqi into an intelligent experience—obsessed with your strategy, 
-              devoted to your improvement, fueling your growth.
+              {t('heroSubtitle')}
             </p>
           </div>
 
@@ -36,11 +37,11 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder={t('enterEmail')}
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             />
             <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 whitespace-nowrap">
-              Get started
+              {t('getStarted')}
             </button>
           </div>
 
@@ -48,7 +49,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="group inline-flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">
               <Play className="mr-2 w-5 h-5" />
-              Watch demo
+              {t('watchDemo')}
             </button>
             <span className="text-gray-400">•</span>
             <div className="flex items-center text-sm text-gray-600">
@@ -58,25 +59,25 @@ const Hero: React.FC = () => {
                 <div className="w-6 h-6 bg-purple-500 rounded-full border-2 border-white"></div>
                 <div className="w-6 h-6 bg-orange-500 rounded-full border-2 border-white"></div>
               </div>
-              Join 50,000+ players
+              {t('joinPlayers')}
             </div>
           </div>
 
           {/* Trust indicators */}
           <div className="pt-12">
-            <p className="text-sm text-gray-500 mb-8">Trusted by Go players worldwide</p>
+            <p className="text-sm text-gray-500 mb-8">{t('trustedBy')}</p>
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">50K+</div>
-                <div className="text-sm text-gray-500">Active players</div>
+                <div className="text-sm text-gray-500">{t('activePlayers')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">1M+</div>
-                <div className="text-sm text-gray-500">Games analyzed</div>
+                <div className="text-sm text-gray-500">{t('gamesAnalyzed')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">99.9%</div>
-                <div className="text-sm text-gray-500">Uptime</div>
+                <div className="text-sm text-gray-500">{t('uptime')}</div>
               </div>
             </div>
           </div>
@@ -119,7 +120,7 @@ const Hero: React.FC = () => {
                     </div>
                     <div className="space-y-4">
                       <div className="bg-blue-50 rounded-lg p-4">
-                        <div className="text-sm font-medium text-blue-900 mb-2">AI Analysis</div>
+                        <div className="text-sm font-medium text-blue-900 mb-2">{t('realTimeAnalysis')}</div>
                         <div className="space-y-2">
                           <div className="h-2 bg-blue-200 rounded w-3/4"></div>
                           <div className="h-2 bg-blue-200 rounded w-1/2"></div>
@@ -139,10 +140,10 @@ const Hero: React.FC = () => {
               
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-medium shadow-lg">
-                Real-time AI
+                {t('realTimeAnalysis')}
               </div>
               <div className="absolute -bottom-4 -left-4 bg-purple-600 text-white px-3 py-1 rounded-lg text-sm font-medium shadow-lg">
-                Smart Hardware
+                {t('smartHardware')}
               </div>
             </div>
           </div>

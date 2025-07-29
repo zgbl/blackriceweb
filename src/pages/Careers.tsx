@@ -1,7 +1,10 @@
 import React from 'react';
 import { MapPin, Clock, Users, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Careers: React.FC = () => {
+  const { t } = useLanguage();
+
   const jobOpenings = [
     {
       id: 1,
@@ -36,10 +39,10 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Join Our Mission
+              {t('joinOurMission')}
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Help us revolutionize the ancient game of Weiqi with cutting-edge AI technology
+              {t('careersSubtitle')}
             </p>
           </div>
         </div>
@@ -50,10 +53,10 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Work at BlackRice?
+              {t('whyWorkWithUs')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're building the future of Weiqi with a passionate team of engineers, designers, and strategists.
+              {t('teamDescription')}
             </p>
           </div>
 
@@ -62,27 +65,27 @@ const Careers: React.FC = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaborative Team</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('collaborativeTeam')}</h3>
               <p className="text-gray-600">
-                Work with talented individuals who share your passion for innovation and excellence.
+                {t('collaborativeTeamDesc')}
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Work-Life Balance</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('workLifeBalance')}</h3>
               <p className="text-gray-600">
-                Flexible hours, remote work options, and unlimited PTO to help you do your best work.
+                {t('workLifeBalanceDesc')}
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <ArrowRight className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Growth Opportunities</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('growthOpportunities')}</h3>
               <p className="text-gray-600">
-                Continuous learning, mentorship programs, and career advancement in a fast-growing company.
+                {t('growthOpportunitiesDesc')}
               </p>
             </div>
           </div>
@@ -94,10 +97,10 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Open Positions
+              {t('openPositions')}
             </h2>
             <p className="text-xl text-gray-600">
-              Find your next opportunity with us
+              {t('findOpportunity')}
             </p>
           </div>
 
@@ -125,7 +128,7 @@ const Careers: React.FC = () => {
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-6">
                     <button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center">
-                      Apply Now
+                      {t('applyNow')}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </button>
                   </div>
@@ -140,13 +143,13 @@ const Careers: React.FC = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Don't See a Perfect Fit?
+            {t('noFitQuestion')}
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals. Send us your resume and tell us how you'd like to contribute.
+            {t('sendResumeDesc')}
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-all duration-200">
-            Send Us Your Resume
+            {t('sendResume')}
           </button>
         </div>
       </section>

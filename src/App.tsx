@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './contexts/LanguageContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,23 +14,25 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/product" element={<Product />} />
-            <Route path="/solutions" element={<SolutionsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/product" element={<Product />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }
 
