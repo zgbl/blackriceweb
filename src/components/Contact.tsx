@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('generalInquiries')}</h3>
-                  <p className="text-gray-600">blackricetect@gmail.com</p>
+                  <p className="text-gray-600">info@blackrice.top</p>
                 </div>
               </div>
 
