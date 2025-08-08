@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">{t('investmentOpportunities')}</h3>
-                  <p className="text-gray-600">info@blackrice.top</p>
+                  <p className="text-gray-600">tu.xinyu@blackrice.top</p>
                 </div>
               </div>
             </div>
