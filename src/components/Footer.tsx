@@ -28,13 +28,13 @@ const Footer: React.FC = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/blackrice-tech"
                 className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-200"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/blackricetech"
                 className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-200"
               >
                 <Twitter className="w-5 h-5" />
@@ -66,10 +66,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">BlackRice Go</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Community</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">{t('liveStreaming')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Smart Clock</a></li>
+              <li><button className="text-gray-400 hover:text-white transition-colors duration-200 text-left">BlackRice Go</button></li>
+              <li><button className="text-gray-400 hover:text-white transition-colors duration-200 text-left">Community</button></li>
+              <li><button className="text-gray-400 hover:text-white transition-colors duration-200 text-left">{t('liveStreaming')}</button></li>
+              <li><button className="text-gray-400 hover:text-white transition-colors duration-200 text-left">Smart Clock</button></li>
             </ul>
           </div>
         </div>
@@ -79,9 +79,9 @@ const Footer: React.FC = () => {
             © 2024 BlackRice Tech. {t('allRightsReserved')}.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Cookie Policy</a>
+            <button className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</button>
+            <button className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</button>
+            <button className="text-gray-400 hover:text-white text-sm transition-colors duration-200">Cookie Policy</button>
           </div>
         </div>
       </div>

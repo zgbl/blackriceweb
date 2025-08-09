@@ -51,13 +51,13 @@ const Contact: React.FC = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/company/blackrice-tech"
                   className="p-3 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="#"
+                  href="https://twitter.com/blackricetech"
                   className="p-3 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200 transition-colors duration-200"
                 >
                   <Twitter className="w-6 h-6" />
