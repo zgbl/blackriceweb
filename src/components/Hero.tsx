@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Play, CheckCircle, Star } from 'lucide-react';
+import { Play, Star } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
